@@ -1,0 +1,43 @@
+<html>
+    <head>
+        <title>
+            Error Page
+        </title>
+        <link href="css/bootstrap.min.css" type="text/css" rel="stylesheet">
+        <script type="text/javascript" src="js/jquery.min.js"></script>
+        <script type="text/javascript" src="js/jquery.js"></script>
+        <script type="text/javascript" src="js/bootstrap.min.js"></script>
+        <style>
+           body, html {
+    height: 100%;
+}
+.bg { 
+    /* The image used */
+    background-image: url("images/background_error.jpg");
+
+    /* Full height */
+    height: 100%; 
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+            .center-div{
+                text-align: justify;
+                color:white;
+                font-size: 18px;
+            }
+        </style>
+    </head>
+    <body class="bg">
+        <div class="container center-div">
+            Oops something went wrong. Please check your network connection, close the app and try again. Thank you.
+        </div>
+        <script>
+            var h = document.documentElement.clientHeight;
+            $(".page-gradient").css('height', h);
+            $(".center-div").css('padding-top', (h - 100) / 2);
+        </script>
+    </body>
+</html>

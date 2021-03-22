@@ -1,0 +1,211 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Splash</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0 minimal-ui"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/framework.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/custom1.css">
+    <link rel="stylesheet" type="text/css" href="css/loader.css">
+    <style>
+            .spinner {
+                width: 40px;
+                height: 40px;
+                position: relative;
+                margin: 0px auto;
+            }
+            @media only screen and (min-width:1600px) and (max-width: 2560px) {
+                .spinner {
+                    width: 100px;
+                    height: 100px;
+                    position: relative;
+                    margin: 0px auto;
+                }
+            }
+            @media only screen and (min-width:768px) and (max-width: 1024px) {
+                .spinner {
+                    width: 70px;
+                    height: 70px;
+                    position: relative;
+                    margin: 0px auto;
+                }
+            }
+            @media only screen and (min-width:1024px) and (max-width: 1366px) {
+                .spinner {
+                    width: 100px;
+                    height: 100px;
+                    position: relative;
+                    margin: 0px auto;
+                }
+            }
+
+            .double-bounce1, .double-bounce2 {
+                width: 100%;
+                height: 100%;
+                border-radius: 50%;
+                background-color: #fff;
+                opacity: 0.6;
+                position: absolute;
+                top: 0;
+                left: 0;
+
+                -webkit-animation: sk-bounce 2.0s infinite ease-in-out;
+                animation: sk-bounce 2.0s infinite ease-in-out;
+            }
+
+            .double-bounce2 {
+                -webkit-animation-delay: -1.0s;
+                animation-delay: -1.0s;
+            }
+
+            @-webkit-keyframes sk-bounce {
+                0%, 100% { -webkit-transform: scale(0.0) }
+                50% { -webkit-transform: scale(1.0) }
+            }
+
+            @keyframes sk-bounce {
+                0%, 100% {
+                    transform: scale(0.0);
+                    -webkit-transform: scale(0.0);
+                } 50% {
+                    transform: scale(1.0);
+                    -webkit-transform: scale(1.0);
+                }
+            }
+            .col-lg-1, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-md-1, .col-md-10, .col-md-11, .col-md-12, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-sm-1, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-xs-1, .col-xs-10, .col-xs-11, .col-xs-12, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9 {
+                position: relative;
+                min-height: 1px;
+                padding-right: 15px;
+                padding-left: 0px !important;
+            }
+        </style>
+</head>
+<body>
+<div id="page-content" style="background-color: #000000">
+    <div id="page-content-scroll">
+        <div class="row" id="start"></div>
+        <div class="row">
+            <div class="col-md-3 col-sm-3 col-xs-3">
+
+            </div>
+            <div class="col-md-6 col-sm-6 col-xs-6" style="margin:auto 0;">
+                <img src="images/logo.png" alt="logo" style="width:100%;">
+            </div>
+        </div>
+        <div class="row" id="load" style="height:25%;"></div>
+        <div class="row">
+            <div class="col-md-12 col-sm-12 col-xs-12" style="text-align:center;z-index: 99;padding-left:0;padding-right:15px;margin:0 !important;">
+                <div class="spinner">
+                    <div class="double-bounce1"></div>
+                    <div class="double-bounce2"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<script>
+            var device_height = document.documentElement.clientHeight;
+            var device_width = document.documentElement.clientWidth;
+            var h = (device_height - 450);
+
+            $("#start").css('height', h);
+
+            if (device_height == 480) {
+                var h = (device_height - 325);
+
+                $("#start").css('height', h);
+
+            }
+            if (device_height == 533) {
+                var h = (device_height - 350);
+
+                $("#start").css('height', h);
+
+            }
+            if (device_height == 640) {
+                var h = (device_height - 400);
+
+                $("#start").css('height', h);
+
+            }
+            if (device_height == 667) {
+                var h = (device_height - 500);
+
+                $("#start").css('height', h);
+
+            }
+            if (device_height == 960) {
+                var h = (device_height - 600);
+
+                $("#start").css('height', h);
+
+            }
+            if (device_height == 1024) {
+                var h = (device_height - 750);
+                var loaderheight = h + 70;
+                $("#start").css('height', h);
+
+            }
+            if (device_width == 412) {
+                var h = (device_height - 530);
+
+                $("#start").css('height', h);
+
+            }
+            if (device_height == 732) {
+                var h = (device_height - 460);
+
+                $("#start").css('height', h);
+
+            }
+            if (device_height == 736) {
+                var h = (device_height - 530);
+
+                $("#start").css('height', h);
+
+            }
+            if (device_height == 1280) {
+                var h = (device_height - 815);
+
+                $("#start").css('height', h);
+
+            }
+            if (device_height == 1366) {
+                var h = (device_height - 1000);
+
+                $("#start").css('height', h);
+
+            }
+            if (device_height == 2560) {
+                var h = (device_height - 1550);
+
+                $("#start").css('height', h);
+
+            }
+			if (device_height == 1024) {
+                var h = (device_height - 620);
+
+                $("#start").css('height', h);
+
+            }
+            if (device_height == 1920) {
+                var h = (device_height - 1380);
+
+                $("#start").css('height', h);
+
+            }
+        </script>
+<script>
+            setTimeout(function () {
+            window.location.href = "https://gogoanime.vc";
+            }, 1800); //will call the app after 1.8 secs.
+        </script>
+</body>
+</html>
